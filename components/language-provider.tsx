@@ -37,6 +37,15 @@ const translations = {
     'download_cv.button': 'Download CV',
     'download_cv.text': 'Download CV',
     'projects.title' : 'Projects',
+    'about.title': 'About Me',
+    'about.description': `I am a Software Engineering student with a TSU degree in
+Multiplatform Applications. I have experience in software
+development and creating applications for different platforms.
+I am looking for opportunities to apply my knowledge and skills
+in a dynamic environment and contribute to innovative projects.`,
+'skills.mobile':'Mobile Development',
+
+
   },
   es: {
     'nav.home': 'Inicio',
@@ -64,6 +73,15 @@ const translations = {
     'download_cv.button': 'Descargar CV',
     'download_cv.text': 'Descargar CV',
     'projects.title' : 'Proyectos',
+    'about.title': 'Acerca de Mí',
+    'about.description': `Soy estudiante de Ingeniería en Software con un título de TSU
+en Aplicaciones Multiplataforma. Tengo experiencia en desarrollo
+de software y en la creación de aplicaciones para diferentes
+plataformas. Busco oportunidades para aplicar mis conocimientos
+y habilidades en un entorno dinámico y contribuir a proyectos
+innovadores.`,
+'skills.mobile':'Desarrollo Movil',
+
   },
 };
 

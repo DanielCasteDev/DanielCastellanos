@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { SiJavascript, SiPhp, SiKotlin, SiCplusplus, SiReact, SiLaravel, SiVite, SiNextdotjs, SiMysql, SiMongodb, SiPostgresql,SiGithub}  from "react-icons/si";
+import { SiJavascript, SiPhp, SiKotlin, SiCplusplus, SiReact, SiNodedotjs,SiExpress,SiLaravel, SiVite, SiNextdotjs, SiMysql, SiMongodb, SiPostgresql,SiGithub,SiSwift,SiAndroidstudio,SiGit,SiCpanel}  from "react-icons/si";
 import { AiOutlineFilePdf,AiOutlineArrowRight } from "react-icons/ai"; // Importar icono de descarga
 import { FaJava } from 'react-icons/fa'; // Asegúrate de importar el icono de Java
 
@@ -19,7 +19,8 @@ import {
   GraduationCap,
   Database,
   Github,
-  Linkedin
+  Linkedin,
+  Smartphone
 } from 'lucide-react';
 
 const container = {
@@ -42,50 +43,64 @@ export default function Home() {
 
   return (
     <div className="container px-4 py-8 mx-auto max-w-6xl">
-      <motion.section
-        initial="hidden"
-        animate="show"
-        variants={container}
-        className="mb-20 text-center"
-      >
-        <motion.div variants={item} className="relative w-40 h-40 mx-auto mb-8">
-        <Image
-  src="/nata.jpg" // Ruta a la imagen en la carpeta public
-  alt="Daniel Castellanos"
-  width={160}
-  height={160}
-  className="rounded-full shadow-lg border-4 border-primary/10"
-/>
-        </motion.div>
-        <motion.h1 variants={item} className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-blue-600 text-transparent bg-clip-text">
-          Daniel Castellanos
-        </motion.h1>
-        <motion.h2 variants={item} className="text-3xl font-semibold mb-4 text-muted-foreground">
-          {t('profile.title')}
-        </motion.h2>
-        <motion.p variants={item} className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          {t('profile.intro')}
-        </motion.p>
-        <motion.div variants={item} className="flex justify-center gap-4 mt-8">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"
-            className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
-            <Github className="w-6 h-6" />
-          </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer"
-            className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
-            <Linkedin className="w-6 h-6" />
-          </a>
+     <motion.section
+  initial="hidden"
+  animate="show"
+  variants={container}
+  className="mb-32 text-center"
+>
+  <motion.div variants={item} className="relative w-40 h-40 mx-auto mb-12">
+    <Image
+      src="/nata.jpg" // Ruta a la imagen en la carpeta public
+      alt="Daniel Castellanos"
+      width={160}
+      height={160}
+      className="rounded-full shadow-lg border-4 border-primary/10"
+    />
+  </motion.div>
+  <motion.h1 variants={item} className="text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-blue-600 text-transparent bg-clip-text">
+    Daniel Castellanos
+  </motion.h1>
+  <motion.h2 variants={item} className="text-3xl font-semibold mb-8 text-muted-foreground">
+    {t('profile.title')}
+  </motion.h2>
+  <motion.p variants={item} className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12">
+    {t('profile.intro')}
+  </motion.p>
+  <motion.div variants={item} className="flex justify-center gap-6 mt-10">
+    <a href="https://github.com/DanielCasteDev" target="_blank" rel="noopener noreferrer"
+      className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+      <Github className="w-7 h-7" />
+    </a>
+    <a href="https://linkedin.com/in/DanielCastellanos2904" target="_blank" rel="noopener noreferrer"
+      className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+      <Linkedin className="w-7 h-7" />
+    </a>
+    <a 
+      href="/cv.pdf" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+    >
+      <AiOutlineFilePdf className="w-7 h-7" />
+    </a>
+  </motion.div>
+</motion.section>
 
-          <a 
-    href="/cv.pdf" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-  >
-    <AiOutlineFilePdf className="w-6 h-6" />
-  </a>
-        </motion.div>
-      </motion.section>
+<motion.section
+  initial="hidden"
+  animate="show"
+  variants={container}
+  className="mb-32 text-center"
+>
+  <motion.h2 variants={item} className="text-4xl font-bold mb-10 bg-gradient-to-r from-primary to-blue-600 text-transparent bg-clip-text">
+    {t('about.title')}
+  </motion.h2>
+  <motion.p variants={item} className="text-xl text-muted-foreground max-w-3xl mx-auto mb-16">
+    {t('about.description')}
+  </motion.p>
+</motion.section>
+
 
       <motion.section
   variants={container}
@@ -96,64 +111,69 @@ export default function Home() {
   <motion.h2 variants={item} className="text-3xl font-bold mb-8 text-center">
     {t('skills.title')}
   </motion.h2>
-  <motion.div variants={item} className="grid grid-cols-1 md:grid-cols-3 gap-8">
-    
-    {/* Programming Languages Card */}
+  <motion.div variants={item} className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
+{/* Programming Languages Card */}
 <Card className="p-8 hover:shadow-lg transition-shadow bg-gradient-to-br from-background to-primary/5">
   <div className="flex items-center mb-6">
     <Code2 className="w-8 h-8 mr-4 text-primary" />
     <h3 className="text-xl font-semibold">{t('skills.languages')}</h3>
   </div>
   <div className="flex flex-wrap gap-2">
-    <Badge variant="secondary" className="px-3 py-1">
-      <SiJavascript className="inline mr-2" />JavaScript
-    </Badge>
-    <Badge variant="secondary" className="px-3 py-1">
-      <SiPhp className="inline mr-2" />PHP
-    </Badge>
-    <Badge variant="secondary" className="px-3 py-1">
-      <SiKotlin className="inline mr-2" />Kotlin
-    </Badge>
-    <Badge variant="secondary" className="px-3 py-1">
-      <SiCplusplus className="inline mr-2" />C++
-    </Badge>
-    {/* Agregar Java con su icono de react-icons */}
-    <Badge variant="secondary" className="px-3 py-1">
-      <FaJava className="inline mr-2" />Java
-    </Badge>
+    <Badge variant="secondary" className="px-3 py-1"><SiJavascript className="inline mr-2" />JavaScript</Badge>
+    <Badge variant="secondary" className="px-3 py-1"><SiPhp className="inline mr-2" />PHP</Badge>
+    <Badge variant="secondary" className="px-3 py-1"><SiKotlin className="inline mr-2" />Kotlin</Badge>
+    <Badge variant="secondary" className="px-3 py-1"><SiCplusplus className="inline mr-2" />C++</Badge>
+    <Badge variant="secondary" className="px-3 py-1"><FaJava className="inline mr-2" />Java</Badge>
   </div>
 </Card>
 
+{/* Web Technologies Card */}
+<Card className="p-8 hover:shadow-lg transition-shadow bg-gradient-to-br from-background to-primary/5">
+  <div className="flex items-center mb-6">
+    <Globe className="w-8 h-8 mr-4 text-primary" />
+    <h3 className="text-xl font-semibold">{t('skills.web')}</h3>
+  </div>
+  <div className="flex flex-wrap gap-2">
+    <Badge variant="secondary" className="px-3 py-1"><SiReact className="inline mr-2" />React.js</Badge>
+    <Badge variant="secondary" className="px-3 py-1"><SiLaravel className="inline mr-2" />Laravel</Badge>
+    <Badge variant="secondary" className="px-3 py-1"><SiVite className="inline mr-2" />Vite</Badge>
+    <Badge variant="secondary" className="px-3 py-1"><SiNextdotjs className="inline mr-2" />Next.js</Badge>
+    <Badge variant="secondary" className="px-3 py-1"><SiExpress className="inline mr-2" />Express.js</Badge>
+    <Badge variant="secondary" className="px-3 py-1"><SiNodedotjs className="inline mr-2" />Node.js</Badge>
+    <Badge variant="secondary" className="px-3 py-1"><SiGithub className="inline mr-2" />GitHub</Badge>
+    <Badge variant="secondary" className="px-3 py-1"><SiGit className="inline mr-2" />Git</Badge>
+    <Badge variant="secondary" className="px-3 py-1"><SiCpanel className="inline mr-2" />cPanel</Badge>
+  </div>
+</Card>
 
-    {/* Web Technologies Card */}
-    <Card className="p-8 hover:shadow-lg transition-shadow bg-gradient-to-br from-background to-primary/5">
-      <div className="flex items-center mb-6">
-        <Globe className="w-8 h-8 mr-4 text-primary" />
-        <h3 className="text-xl font-semibold">{t('skills.web')}</h3>
-      </div>
-      <div className="flex flex-wrap gap-2">
-        <Badge variant="secondary" className="px-3 py-1"><SiReact className="inline mr-2" />React.js</Badge>
-        <Badge variant="secondary" className="px-3 py-1"><SiLaravel className="inline mr-2" />Laravel</Badge>
-        <Badge variant="secondary" className="px-3 py-1"><SiVite className="inline mr-2" />Vite</Badge>
-        <Badge variant="secondary" className="px-3 py-1"><SiNextdotjs className="inline mr-2" />Next.js</Badge>
-      </div>
-    </Card>
+{/* Mobile Development Card */}
+<Card className="p-8 hover:shadow-lg transition-shadow bg-gradient-to-br from-background to-primary/5">
+  <div className="flex items-center mb-6">
+    <Smartphone className="w-8 h-8 mr-4 text-primary" />
+    <h3 className="text-xl font-semibold">{t('skills.mobile')}</h3>
+  </div>
+  <div className="flex flex-wrap gap-2">
+    <Badge variant="secondary" className="px-3 py-1"><SiAndroidstudio className="inline mr-2" />Android Studio</Badge>
+    <Badge variant="secondary" className="px-3 py-1"><SiSwift className="inline mr-2" />Swift</Badge>
+  </div>
+</Card>
 
-    {/* Databases Card */}
-    <Card className="p-8 hover:shadow-lg transition-shadow bg-gradient-to-br from-background to-primary/5">
-      <div className="flex items-center mb-6">
-        <Database className="w-8 h-8 mr-4 text-primary" />
-        <h3 className="text-xl font-semibold">{t('skills.databases')}</h3>
-      </div>
-      <div className="flex flex-wrap gap-2">
-        <Badge variant="secondary" className="px-3 py-1"><SiMysql className="inline mr-2" />MySQL</Badge>
-        <Badge variant="secondary" className="px-3 py-1"><SiMongodb className="inline mr-2" />MongoDB</Badge>
-        <Badge variant="secondary" className="px-3 py-1"><SiPostgresql className="inline mr-2" />PostgreSQL</Badge>
-      </div>
-    </Card>
-    
-  </motion.div>
+{/* Databases Card */}
+<Card className="p-8 hover:shadow-lg transition-shadow bg-gradient-to-br from-background to-primary/5">
+  <div className="flex items-center mb-6">
+    <Database className="w-8 h-8 mr-4 text-primary" />
+    <h3 className="text-xl font-semibold">{t('skills.databases')}</h3>
+  </div>
+  <div className="flex flex-wrap gap-2">
+    <Badge variant="secondary" className="px-3 py-1"><SiMysql className="inline mr-2" />MySQL</Badge>
+    <Badge variant="secondary" className="px-3 py-1"><SiMongodb className="inline mr-2" />MongoDB</Badge>
+    <Badge variant="secondary" className="px-3 py-1"><SiPostgresql className="inline mr-2" />PostgreSQL</Badge>
+  </div>
+</Card>
+
+</motion.div>
+
 </motion.section>
 
 
