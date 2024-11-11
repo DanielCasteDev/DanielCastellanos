@@ -51,7 +51,7 @@ export default function Home() {
 >
   <motion.div variants={item} className="relative w-40 h-40 mx-auto mb-12">
     <Image
-      src="/yo.jpg" // Ruta a la imagen en la carpeta public
+      src="/yo.webp" // Ruta a la imagen en la carpeta public
       alt="Daniel Castellanos"
       width={160}
       height={160}
@@ -227,7 +227,7 @@ export default function Home() {
         {/* Project 1 Card */}
         <Card className="p-8 hover:shadow-lg transition-shadow bg-gradient-to-br from-background to-primary/5">
         <img 
-    src="/clima.png" 
+    src="/clima.webp" 
     alt="Imagen del Proyecto 1" 
     className="w-full h-48 object-cover mb-6 rounded-lg"
   />
@@ -257,7 +257,7 @@ export default function Home() {
         {/* Project 2 Card */}
 <Card className="p-8 hover:shadow-lg transition-shadow bg-gradient-to-br from-background to-primary/5">
   <img 
-    src="/hash.png" 
+    src="/hash.webp" 
     alt="Imagen del Proyecto 2" 
     className="w-full h-48 object-cover mb-6 rounded-lg"
   />
@@ -290,7 +290,7 @@ export default function Home() {
         {/* Project 3 Card */}
         <Card className="p-8 hover:shadow-lg transition-shadow bg-gradient-to-br from-background to-primary/5">
         <img 
-    src="/tecnosol.png" 
+    src="/tecnosol.webp" 
     alt="Imagen del Proyecto 3" 
     className="w-full h-48 object-cover mb-6 rounded-lg"
   />
