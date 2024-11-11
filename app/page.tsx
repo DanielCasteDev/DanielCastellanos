@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { SiJavascript, SiPhp, SiKotlin, SiCplusplus, SiReact, SiNodedotjs,SiExpress,SiLaravel, SiVite, SiNextdotjs, SiMysql, SiMongodb, SiPostgresql,SiGithub,SiSwift,SiAndroidstudio,SiGit,SiCpanel,SiTailwindcss}  from "react-icons/si";
+import { SiJavascript, SiPhp,SiCss3, SiKotlin, SiCplusplus, SiReact, SiNodedotjs,SiExpress,SiLaravel, SiVite, SiNextdotjs, SiMysql, SiMongodb, SiPostgresql,SiGithub,SiSwift,SiAndroidstudio,SiGit,SiCpanel,SiTailwindcss}  from "react-icons/si";
 import { AiOutlineFilePdf,AiOutlineArrowRight } from "react-icons/ai"; // Importar icono de descarga
 import { FaJava } from 'react-icons/fa'; // Asegúrate de importar el icono de Java
 
@@ -255,34 +255,37 @@ export default function Home() {
         </Card>
 
         {/* Project 2 Card */}
-        <Card className="p-8 hover:shadow-lg transition-shadow bg-gradient-to-br from-background to-primary/5">
-        <img 
-    src="/portafolio.png" 
+<Card className="p-8 hover:shadow-lg transition-shadow bg-gradient-to-br from-background to-primary/5">
+  <img 
+    src="/hash.png" 
     alt="Imagen del Proyecto 2" 
     className="w-full h-48 object-cover mb-6 rounded-lg"
   />
-          <div className="flex items-center mb-6">
-            <Code2 className="w-8 h-8 mr-4 text-primary" />
-            <h3 className="text-xl font-semibold">{t('projects.project2')}</h3>
-          </div>
-          <p className="text-sm text-gray-500 mb-4">{t('projects.project2Description')}</p>
-          <div className="flex flex-wrap gap-2 mb-4">
-            <Badge variant="secondary" className="px-3 py-1">
-              <SiNextdotjs className="inline mr-2" />Next.js
-            </Badge>
-            <Badge variant="secondary" className="px-3 py-1">
-              <SiTailwindcss className="inline mr-2" />Tailwind CSS
-            </Badge>
-          </div>
-          <div className="flex gap-4">
-            <a href="https://github.com/DanielCasteDev/DanielCastellanos.git" target="_blank" rel="noopener noreferrer">
-              <SiGithub className="w-6 h-6 text-primary hover:text-primary/80 transition-colors" />
-            </a>
-            <a href="https://daniel-castellanos.vercel.app" target="_blank" rel="noopener noreferrer">
-              <AiOutlineArrowRight className="w-6 h-6 text-primary hover:text-primary/80 transition-colors" />
-            </a>
-          </div>
-        </Card>
+  <div className="flex items-center mb-6">
+    <Code2 className="w-8 h-8 mr-4 text-primary" />
+    <h3 className="text-xl font-semibold">{t('projects.project2')}</h3>
+  </div>
+  <p className="text-sm text-gray-500 mb-4">{t('projects.project2Description')}</p>
+  <div className="flex flex-wrap gap-2 mb-4">
+    <Badge variant="secondary" className="px-3 py-1">
+      <SiExpress className="inline mr-2" />Express
+    </Badge>
+    <Badge variant="secondary" className="px-3 py-1">
+      <SiReact className="inline mr-2" />React
+    </Badge>
+    <Badge variant="secondary" className="px-3 py-1">
+      <SiCss3 className="inline mr-2" />CSS
+    </Badge>
+  </div>
+  <div className="flex gap-4">
+    <a href="https://github.com/DanielCasteDev/apimongo.git" target="_blank" rel="noopener noreferrer">
+      <SiGithub className="w-6 h-6 text-primary hover:text-primary/80 transition-colors" />
+    </a>
+    <a href="https://no-blue-eight.vercel.app/" target="_blank" rel="noopener noreferrer">
+      <AiOutlineArrowRight className="w-6 h-6 text-primary hover:text-primary/80 transition-colors" />
+    </a>
+  </div>
+</Card>
 
         {/* Project 3 Card */}
         <Card className="p-8 hover:shadow-lg transition-shadow bg-gradient-to-br from-background to-primary/5">
